@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+@keyframes move-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 300% 50%; /* Плавный сдвиг вправо */
+    }
+}
+
+body {
+    height: 100vh; /* Полная высота экрана */
+    background: linear-gradient(270deg, #2E8B57, #8A2BE2, #0ccb82, #2E8B57);
+    background-size: 300% 300%;
+    animation: move-bg 25s linear infinite;
+}
+
+.main-image {
+    display: block;
+    margin: 15vh auto 0;
+    width: 12%;
+    border-radius: 50%;
+}
+
+/* Меню */
+.main-navigation ul {
+    display: flex;
+    margin-top: 12vh;
+    margin-left: 23%; /* Отступ слева от всего списка */
+}
+
+.main-navigation ul li {
+    list-style: none;
+    margin-right: 20%; /* Отступ между элементами */
+}
+
+.main-navigation ul li:last-child {
+    margin-right: 0; /* Убираем отступ у последнего элемента */
+}
+
+
+.main-navigation ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+
+    color: #6cf8ff;
+    font-size: 25px;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* Стили для кнопок при наведении */
+.main-navigation ul li a:hover {
+    background-color: #4CAF50; /* Фон при наведении */
+    color: #FFFFFF; /* Цвет текста при наведении */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-block {
+    display: flex;
+    margin-top: 30%;
+    margin-left: 8%;
+}
+
+.about-text {
+    display: block;
+
+    /* Прозрачный фон с тенью */
+    background-color: rgba(139, 20, 213, 0.6); /* Прозрачность (0.6) */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Тень */
+
+    /* Текстовые стили */
+    color: aliceblue;
+    height: auto; /* Автоматическая высота */
+    padding: 3%;
+    margin-top: 3.5%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+    border-radius: 15px; /* Закруглённые углы */
+    backdrop-filter: blur(8px); /* Размытие фона */
+}
+
+.about-text p {
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 30px;
+    line-height: 1.4; /* Улучшенный интервал строк */
+}
+
+
+.about-image {
+    display: block;
+    width: 30%;
+    margin-right: 8%;
+    border-radius: 8%;
+}
+
+.portfolio-block {
+    display: flex;
+    margin-top: 40%;
+    margin-left: 30%;
+}
+
+.portfolio-block p {
+    display: block;
+
+    background-color:rgba(6, 255, 82, 0.6);
+    color:#8400ff;
+    font-weight: bold;
+    font-size: 50px;
+}
