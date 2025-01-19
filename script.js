@@ -1,3 +1,4 @@
-let a = [1, 2, 7]
-
-console.log(2 in a)
+function toggleContact() {
+    const contactBox = document.getElementById('contactBox');
+    contactBox.classList.toggle('active'); // Переключаем класс "active"
+}
