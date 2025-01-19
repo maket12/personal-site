@@ -122,3 +122,72 @@ body {
     font-weight: bold;
     font-size: 50px;
 }
+
+/* Контейнер для иконки и блока */
+.icon-container {
+    position: relative;
+    margin-top: 20%;
+    margin-left: 40%;
+}
+
+/* Кнопка-иконка */
+.icon-btn {
+    width: 100px; /* Размер изображения */
+    height: 100px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+/* Блок с контактами */
+.contact-box {
+    position: absolute;
+    top: 110%; /* Расположение ниже иконки */
+    margin-right: 100%;
+    left: 0;
+    right: 40%;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    /* Начальные стили (скрыт) */
+    opacity: 0;
+    transform: translateY(-20px);
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Появление блока */
+.contact-box.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.some {
+    margin-top: 10%;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .main-navigation ul li a {
+        font-size: 1rem;
+    }
+
+    .about-block {
+        flex-direction: column;
+    }
+
+    .about-text {
+        margin: 1rem 0;
+    }
+}
